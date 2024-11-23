@@ -1,0 +1,15 @@
+export declare enum BadgeType {
+    INDICATOR = "indicator",
+    COUNTER = "counter"
+}
+export declare enum BadgeAnchor {
+    TOP_START = "top-start",
+    TOP_END = "top-end",
+    BOTTOM_START = "bottom-start",
+    BOTTOM_END = "bottom-end"
+}
+export declare enum BadgeAlignments {
+    RECTANGULAR = "rectangular",
+    OUTSIDE = "outside",
+    CIRCULAR = "circular"
+}

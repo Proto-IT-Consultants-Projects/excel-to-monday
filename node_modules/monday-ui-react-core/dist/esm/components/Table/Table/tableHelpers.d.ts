@@ -1,0 +1,11 @@
+import React, { AriaAttributes } from "react";
+import { ITableColumn, TableLoadingStateType } from "./Table";
+import { ITableHeaderCellProps } from "../TableHeaderCell/TableHeaderCell";
+import { SkeletonType } from "../../Skeleton/SkeletonConstants";
+export declare function generateWidth(width: ITableColumn["width"]): string;
+export declare function getTableRowLayoutStyles(columns: ITableColumn[], style?: React.CSSProperties): React.CSSProperties;
+export declare function getSortIcon(sortState: ITableHeaderCellProps["sortState"]): React.FC<import("../../Icon/Icons/components/SortAscending").SortAscendingProps>;
+export declare function getNextSortState(sortState: ITableHeaderCellProps["sortState"]): ITableHeaderCellProps["sortState"];
+export declare function getAriaSort(sortState: ITableHeaderCellProps["sortState"]): AriaAttributes["aria-sort"];
+export declare function getSkeletonType(loadingStateType: TableLoadingStateType): SkeletonType;
+export declare function getLoadingTypeForCell(loadingStateType: TableLoadingStateType, rowIndex: number): TableLoadingStateType;
