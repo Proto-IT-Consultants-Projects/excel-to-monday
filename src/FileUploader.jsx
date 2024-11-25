@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 
-import './styles/fileUploader.css'
+import './styles/fileUploader.css';
 
 const FileUploader = ({ onFileUpload, context }) => {
   const [fileData, setFileData] = useState(null);
+  const [processingMessage, setProcessingMessage] = useState("");
 
   const handleFileRead = (file) => {
     const reader = new FileReader();
+    setProcessingMessage("File is being processed...");
     reader.onload = (e) => {
       const binaryStr = e.target.result;
       const workbook = XLSX.read(binaryStr, { type: 'binary' });
       const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
       const jsonData = XLSX.utils.sheet_to_json(sheet);
-      setFileData(jsonData); // Store data in state
+      setFileData(jsonData);
+      setProcessingMessage("File Processed Completely!");
       onFileUpload(jsonData); // Pass file data to parent component
     };
     reader.readAsBinaryString(file);
@@ -23,7 +26,6 @@ const FileUploader = ({ onFileUpload, context }) => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      document.getElementsByTagName('p').innerText = 'File Parsing ...';
       handleFileRead(file);
     }
   };
@@ -38,12 +40,12 @@ const FileUploader = ({ onFileUpload, context }) => {
               type="file"
               accept=".xlsx, .xls, .csv"
               onChange={handleFileChange}
-            /> 
-          </label> 
-          <p style={{alignItems: "center"}}>Board Selected!</p>
+            />
+          </label>
+          <p className="message-display">{processingMessage || "Board Selected!"}</p>
         </div>
-      ) : ( 
-        <p style={{fontSize: "20px"}}>No Board is Selected</p> 
+      ) : (
+        <p style={{ fontSize: "20px" }}>No Board is Selected</p>
       )}
     </div>
   );
