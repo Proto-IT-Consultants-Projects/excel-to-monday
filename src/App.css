@@ -1,6 +1,9 @@
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  padding: 0;
+  background-color: #f0f4f7;
+  color: #333;
 }
 
 .App {
@@ -12,22 +15,91 @@ body {
 }
 
 .container {
-  display: flex;
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
 }
 
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Search Button */
 .custom-file-input {
-  display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 18px;
   cursor: pointer;
-  text-align: center;
   transition: background-color 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .custom-file-input:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
+
+.custom-file-input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+  background: #e0e0e0;
+  animation: loading 1.5s infinite ease-in-out;
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f5f5f5;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Flexbox for Centering Content */
+.card-container, .custom-file-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-icon {
+  font-size: 24px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Add a loading animation for the button */
+.custom-file-input.loading {
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
