@@ -14,6 +14,10 @@ body {
   justify-content: center;
 }
 
+p{
+  font-size: 18px;
+}
+
 .container {
   width: 90%;
   max-width: 800px;
@@ -22,12 +26,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #007bff;
 }
 
 /* Search Button */
@@ -50,6 +48,11 @@ h1 {
 .custom-file-input:focus {
   outline: none;
   box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+
+.custom-file-input.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Skeleton Loader */

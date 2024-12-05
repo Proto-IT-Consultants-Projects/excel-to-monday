@@ -1,0 +1,41 @@
+{
+    "monday_subitems_column_mapping": {
+        "status_18__1": ["Owner/Relative"],
+        "status__1": ["", "REL1: Likely Relationship", "REL2: Likely Relationship", "REL3: Likely Relationship", "REL4: Likely Relationship", "REL5: Likely Relationship"],
+        "email0__1": ["EMAIL: Email1", "REL1: Email 1", "REL2: Email 1", "REL3: Email 1", "REL4: Email 1", "REL5: Email 1"],
+        "dup__of_email_1__1": ["EMAIL: Email2", "REL1: Email 2", "REL2: Email 2", "REL3: Email 2", "REL4: Email 2", "REL5: Email 2"],
+        "dup__of_email_24__1": ["EMAIL: Email3", "REL1: Email 3", "REL2: Email 3", "REL3: Email 3", "REL4: Email 3", "REL5: Email 3"],
+        "dup__of_email_37__1": ["EMAIL: Email4"],
+        "dup__of_email_48__1": ["EMAIL: Email5"],
+        "link__1": ["Link"],
+        "link_1__1": ["Link 2"],
+        "link_2__1": ["Link 3"],
+        "phone10__1": ["PH: Phone1", "REL1: Phone 1", "REL2: Phone 1", "REL3: Phone 1", "REL4: Phone 1", "REL5: Phone 1"],
+        "dup__of_phone_1__1": ["PH: Phone2", "REL1: Phone 2", "REL2: Phone 2", "REL3: Phone 2", "REL4: Phone 2", "REL5: Phone 2"],
+        "dup__of_phone_2__1": ["PH: Phone3", "REL1: Phone 3", "REL2: Phone 3", "REL3: Phone 3", "REL4: Phone 3", "REL5: Phone 3"],
+        "dup__of_phone_33__1": ["PH: Phone4"],
+        "dup__of_phone_42__1": ["PH: Phone5"],
+        "text1__1": ["DOB: Age", "REL1: Age", "REL2: Age", "REL3: Age", "REL4: Age", "REL5: Age"],
+        "dup__of_deceased__1": ["LIEN: Lien (Y/N/U)"],
+        "text3__1": ["LIEN: Creditor"],
+        "text4__1": ["LIEN: Case Description"],
+        "status2__1": ["DEC: Deceased (Y/N/U)"]
+    },
+    "status_mapping": {
+      "OTHER RELATIVE": "Other Relative",
+      "SIBLING": "Sibling",
+      "CHILD": "Child",
+      "PARENT": "Parent",
+      "SPOUSE": "Spouse",
+      "IN-LAW": "In-Law",
+      "": "Owner"
+    },
+    "subitem_titles": {
+      "0": "NAME: Full",
+      "1": "REL1: Full Name",
+      "2": "REL2: Full Name",
+      "3": "REL3: Full Name",
+      "4": "REL4: Full Name",
+      "5": "REL5: Full Name"
+    }
+  }
